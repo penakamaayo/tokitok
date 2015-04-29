@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %title tokitok_:
+    %link{:href => 'assets/css/bootstrap.min.css', :media => 'screen', :rel => 'stylesheet'}
+    %link{:href => 'assets/css/style.css', :media => 'screen', :rel => 'stylesheet'}
+    %meta{:content => 'width=device-width, initial-scale=1.0', :name => "viewport"}
+
+  %body
+    .container{:style => 'padding-top: 30px;'}
+      .text-center
+        %h2 tokitok_:
+
+      .row
+        .col-md-12
+          #js-chat-messages.messages
+
+      %form#input-form
+        .row
+          .col-md-3
+            .form-group
+              %input#input-handle.form-control.input-lg{:autofocus => '',
+              :placeholder => 'Who you?', :type => 'text', :required => true}/
+          .col-md-9
+            .input-group.input-group-lg
+              %input#input-text.form-control{:autofocus => true, :type => 'text',
+                :placeholder => 'Your message here..'}
+              %span.input-group-btn
+                %button.btn.btn-primary.btn-lg{:type => 'submit'} Send!
+        / .row
+        /   .col-md-12
+        /     %button#js-disconnect.btn.btn-danger.btn-lg.btn-block{:style => 'height:100px;border-radius:200px;'} PANIC BUTTON
+    %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"}
+    %script{:src => 'assets/js/bootstrap.min.js', :type => 'text/javascript'}
+    %script{:src => 'assets/js/application.js', :type => 'text/javascript'}
