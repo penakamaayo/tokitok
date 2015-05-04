@@ -6,5 +6,10 @@ module ChatDemo
     get '/' do
       haml :index
     end
+
+    get '/bimby' do
+      haml :bimby
+    end
+
   end
 end
